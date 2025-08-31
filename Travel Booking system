@@ -74,41 +74,7 @@ bool file_exists()
     ifstream seats_file("Seats.txt");
 
     return seats_file.good(); // Check if file was successfully opened
-}
-
-// to view available seats
-
-//void view_available_seats()
-//{
-//    ifstream in("Seats.txt", ios::in);
-//    string s;
-//    while (in.eof() == 0)
-//    {
-//        for (int i = 0; i < 5; i++)
-//        {
-//            for (int i = 0; i < 5; i++)
-//            {
-//                getline(in, s);
-
-//                if (s == "0")
-//                {
-//                    s = " ";
-//                }
-//                if (s.length() == 1)
-//                {
-//                    s = " " + s;
-//                }
-
-//                cout << s << "  ";
-//            }
-//            cout << endl
-//                 << endl;
-//        }
-//        cout << endl;
-//    }
-//    in.close();
-//}
-
+} 
 
 void view_available_seats()
 {
@@ -1200,3 +1166,4 @@ int main()
     } while (choice != 9);
 
     return 0;
+}
