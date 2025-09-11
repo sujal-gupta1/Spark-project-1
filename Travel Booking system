@@ -359,7 +359,7 @@ bool is_copy_user(int r, User k, ifstream &file)
 bool num_format(long int num)
 {
     int count = 0;
-    while (num)
+    while (num>0)
     {
         num = num / 10;
         ++count;
@@ -951,10 +951,17 @@ void AddUser()
         }
         cout << "Enter MobileNo :  ";
         cin >> mbno;
+        if(cin.fail()){
+            mbno=1; 
+            break;
+        }  
         res = num_format(mbno);
         n++;
     } while (res == false);
-    
+
+     if(mbno==1){
+        cout<<"Error in registering mobile number.\nPlease reregister the user"<<endl;
+    }
     
     int ct = 0;
 
